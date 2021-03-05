@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             x:Class="xamarin_bindings4.MainPage">
+
+    <StackLayout> 
+        <Label Text="Control ListView"  FontSize="40" 
+               Margin="40"
+               HorizontalOptions="Center" 
+           VerticalOptions="CenterAndExpand" /> 
+        <ListView x:Name="canciones" Margin="40"> 
+            <ListView.ItemTemplate> 
+                <DataTemplate> 
+                    <ViewCell> 
+                        <StackLayout Orientation="Horizontal"> 
+                            <Image Source="{Binding Imagen}" 
+                                   WidthRequest="50" 
+                                   HeightRequest="50"/> 
+                            <StackLayout Orientation="Vertical"> 
+                                <Label Text="{Binding Artista}" 
+                                       FontSize="15" TextColor="Blue"/> 
+                                <Label Text="{Binding Titulo}" 
+                                       FontSize="12" TextColor="Fuchsia"/> 
+                            </StackLayout> 
+                        </StackLayout> 
+                    </ViewCell> 
+                </DataTemplate> 
+            </ListView.ItemTemplate> 
+        </ListView> 
+    </StackLayout> 
+</ContentPage> 
